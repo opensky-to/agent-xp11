@@ -22,7 +22,7 @@ This is the agent to interface with X-Plane 11 using UDP Datarefs
 _Clone this repository locally:_
 
 ```bash
-git clone https://github.com/maximegris/angular-electron.git
+git clone https://github.com/opensky-to/agent-xp11
 ```
 
 _Install dependencies with npm (used by Electron renderer process):_
