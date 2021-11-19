@@ -1,5 +1,7 @@
 <img src="https://raw.githubusercontent.com/opensky-to/branding/master/png/OpenSkyLogo_Banner64.png" placeholder="OpenSky" />
 
+[![Discord](https://img.shields.io/discord/837475420923756544.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.com/invite/eR3yePrj79)
+[![Facebook](https://img.shields.io/badge/-OpenSky-e84393?label=&logo=facebook&logoColor=ffffff&color=6399AE&labelColor=00C2CB)](https://www.facebook.com/Opensky.to/)
 ![Maintained][maintained-badge]
 [![Make a pull request][prs-badge]][prs]
 [![License][license-badge]](LICENSE.md)
@@ -8,8 +10,6 @@
 [![MacOS Build][macos-build-badge]][macos-build]
 [![Windows Build][windows-build-badge]][windows-build]
 
-[![Discord](https://img.shields.io/discord/837475420923756544.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.com/invite/eR3yePrj79)
-[![Facebook](https://img.shields.io/badge/-OpenSky-e84393?label=&logo=facebook&logoColor=ffffff&color=6399AE&labelColor=00C2CB)](https://www.facebook.com/Opensky.to/)
 
 # Introduction
 
