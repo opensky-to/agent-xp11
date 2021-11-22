@@ -3,6 +3,10 @@
   "directories": {
     "output": "release/"
   },
+  "protocols": [{
+    "name": "opensky-agent-xp11",
+    "schemes": ["opensky-agent-xp11"]
+  }],
   "files": [
     "**/*",
     "!**/*.ts",

@@ -1,0 +1,28 @@
+@import "../../theme.scss";
+
+:host {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-width: 200px;
+  min-height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 16px 12px;
+  box-sizing: border-box;
+  margin: 0 0 16px 0;
+}
+
+:host:last-child {
+  margin-bottom: 0;
+}
+
+span.title {
+  font-size: 1.2em;
+  position: absolute;
+  font-weight: 500;
+  padding: 0px 2px;
+  background-color: $dark-background;
+  top: -10px;
+  left: 12px;
+}

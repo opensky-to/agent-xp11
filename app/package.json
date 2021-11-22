@@ -3,5 +3,7 @@
   "version": "10.3.0",
   "main": "main.js",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "rxjs": "~6.6.0"
+  }
 }

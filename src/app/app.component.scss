@@ -1,8 +1,143 @@
-.sidenav {
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@import "../theme.scss";
+$color-config: mat.get-color-config($theme);
+$primary-palette: map.get($color-config, "primary");
+$accent-palette: map.get($color-config, "accent");
+$warn-palette: map.get($color-config, "warn");
+$is-dark-theme: map.get($color-config, "is-dark");
+
+.brand-icon {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  align-self: center;
+}
+
+h1.page-title {
+  font-size: 36px !important;
+  font-family: "Montserrat" !important;
+  font-weight: 300 !important;
+}
+
+.toolbar-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  button {
+    background: mat.get-color-from-palette($primary-palette, "default");
+    border-radius: 5px;
+    transition: background 0.2s ease-in-out;
+  }
+  button:hover {
+    background: mat.get-color-from-palette($primary-palette, "lighter");
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+
+  button.danger {
+    background: mat.get-color-from-palette($warn-palette, "default");
+  }
+  button.danger:hover {
+    background: mat.get-color-from-palette($warn-palette, "lighter");
+  }
+}
+
+// Css Grid with three columns
+div.main-grid {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 24px;
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.map-container {
+  min-width: var(--map-min-width);
+  flex-grow: 1;
+}
+
+.col-1 {
+  min-width: 400px;
+  max-width: 500px;
+}
+
+.col-3 {
+  min-width: 350px;
+  max-width: 500px;
+}
+
+//screen size is less then 1450px
+@media screen and (max-width: 1450px) {
+  .col-3 {
+    position: absolute;
+    top: 0px;
+    padding: 24px;
+    right: 0px;
+    bottom: 0px;
+    transform-origin: right;
+    width: 400px;
+    z-index: 1000;
+    background-color: var(--dark-background);
+    border-left: 1px solid #ccc;
+  }
+}
+
+.map-container,
+.col-1,
+.col-3 {
+  min-height: 100%;
+}
+
+.col-3.open {
+  right: 0px;
+}
+
+.col-3-handle {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #eee;
+  box-sizing: border-box;
+  left: -36px;
+  width: 36px;
+  background: var(--dark-background);
+  height: 100px;
+  // center vertically
+  top: calc(50% - 50px);
+  // 1px solid #ccc border top, left and bottom
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 16px;
+    transform: rotate(0deg);
+    transition: transform 0.4s ease-in-out;
+  }
+}
+
+// cursor pointer when hovering over the handle
+.col-3-handle:hover {
+  cursor: pointer;
+}
+
+// rotate image 180deg when handle is open
+.col-3-handle.open {
+  img {
+    transform: rotate(180deg);
+  }
 }

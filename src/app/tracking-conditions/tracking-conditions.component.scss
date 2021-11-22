@@ -1,0 +1,20 @@
+:host {
+  width: 100%;
+}
+
+//css grid with 3 columns and 6 rows
+.form {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 10px;
+  grid-auto-flow: row;
+  grid-auto-columns: max-content;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+span {
+  display: block;
+}

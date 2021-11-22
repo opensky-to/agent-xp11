@@ -1,6 +1,54 @@
-<mat-sidenav-container class="sidenav">
-  <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
-  <mat-sidenav-content>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<mat-toolbar>
+  <img src="assets/opensky/logo.svg" class="brand-icon" />
+  <h1 class="page-title">Flight Tracking</h1>
+
+  <div class="toolbar-buttons">
+    <button mat-icon-button (click)="toggleCol3()">
+      <img src="assets/icons/opensky/minimize.svg" alt="" />
+    </button>
+    <button mat-icon-button>
+      <img src="assets/icons/opensky/maximize.svg" alt="" />
+    </button>
+    <button mat-icon-button class="danger">
+      <img src="assets/icons/opensky/close.svg" alt="" />
+    </button>
+  </div>
+</mat-toolbar>
+
+<div class="main-grid">
+  <div class="col-1">
+    <app-main-grid-element title="Flight plan">
+      <app-flight-plan-overview></app-flight-plan-overview>
+    </app-main-grid-element>
+    <app-main-grid-element title="Tracking conditions">
+      <app-tracking-conditions></app-tracking-conditions>
+    </app-main-grid-element>
+    <app-main-grid-element title="Weight and Balances">
+      <app-weight-and-balances></app-weight-and-balances>
+    </app-main-grid-element>
+  </div>
+  <div class="map-container">
+    <app-main-grid-element title="Map" class="h-100">
+      <app-map></app-map>
+    </app-main-grid-element>
+  </div>
+  <div class="col-3" [@slideIn]="col3OpenTrigger" [@.disabled]="largeScreen">
+    <div
+      class="col-3-handle"
+      [class.open]="col3Open"
+      (click)="toggleCol3()"
+      *ngIf="!largeScreen"
+    >
+      <img src="assets/icons/chevron_left.svg" />
+    </div>
+    <app-main-grid-element title="Flight plan">
+      <app-flight-plan></app-flight-plan>
+    </app-main-grid-element>
+    <app-main-grid-element title="Flight events">
+      <app-flight-events></app-flight-events>
+    </app-main-grid-element>
+    <app-main-grid-element title="Graphs">
+      <app-flight-graphs></app-flight-graphs>
+    </app-main-grid-element>
+  </div>
+</div>

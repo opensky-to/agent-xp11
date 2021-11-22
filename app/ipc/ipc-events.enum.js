@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IPC_EVENTS = void 0;
+var IPC_EVENTS;
+(function (IPC_EVENTS) {
+    IPC_EVENTS["X_PLANE_CONNECTION_STATUS"] = "X_PLANE_CONNECTION_STATUS";
+    IPC_EVENTS["X_PLANE_CONNECTION_STATUS_REQUEST"] = "X_PLANE_CONNECTION_STATUS_REQUEST";
+    IPC_EVENTS["FRONTEND_READY"] = "FRONTEND_READY";
+    IPC_EVENTS["X_PLANE_DATAREFS"] = "X_PLANE_DATAREFS";
+    IPC_EVENTS["LOGIN"] = "LOGIN";
+    IPC_EVENTS["REFRESH_TOKEN"] = "REFRESH_TOKEN";
+    IPC_EVENTS["NEW_TOKENS"] = "NEW_TOKENS";
+})(IPC_EVENTS = exports.IPC_EVENTS || (exports.IPC_EVENTS = {}));
+//# sourceMappingURL=ipc-events.enum.js.map
